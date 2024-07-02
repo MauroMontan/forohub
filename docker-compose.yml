@@ -1,0 +1,15 @@
+services:
+
+  mysqldatabase:
+    container_name: foro-hub
+    environment:
+      MYSQL_PASSWORD: "root"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "forohub"
+      MYSQL_USER: "mauro"
+    expose:
+      - 3307
+    image: mysql:latest
+    ports:
+      - "3307:3306"
+    restart: always
